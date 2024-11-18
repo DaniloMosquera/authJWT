@@ -1,0 +1,65 @@
+<div class="container">
+    <br>
+    <h1>Editar un empleado</h1>
+    <hr>
+    <form [formGroup]="employeeForm" (ngSubmit)="putForm(employeeForm.value)">
+        <div class="form-group">
+            <label for="employeeId">ID:</label>
+            <input formControlName="employee_id" type="text" class="form-control" id="employeeId"
+                placeholder="Ingrese el ID" required readonly>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Nombre:</label>
+            <input formControlName="first_name" type="text" class="form-control" id="firstName"
+                placeholder="Ingrese el nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Apellido:</label>
+            <input formControlName="last_name" type="text" class="form-control" id="lastName"
+                placeholder="Ingrese el apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input formControlName="email" type="email" class="form-control" id="email"
+                placeholder="Ingrese el correo electrónico" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Teléfono:</label>
+            <input formControlName="phone_number" type="tel" class="form-control" id="phoneNumber"
+                placeholder="Ingrese el número de teléfono" required>
+        </div>
+        <div class="form-group">
+            <label for="hireDate">Fecha de contrato:</label>
+            <input formControlName="hire_date" type="date" class="form-control" id="hireDate"
+                placeholder="Ingrese la fecha de contratación" required>
+        </div>
+        <div class="form-group">
+            <label for="jobId">ID de trabajo:</label>
+            <input formControlName="job_id" type="text" class="form-control" id="jobId"
+                placeholder="Ingrese la ID de trabajo" required>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salario:</label>
+            <input formControlName="salary" type="number" class="form-control" id="salary"
+                placeholder="Ingrese el salario" required>
+        </div>
+        <div class="form-group">
+            <label for="commissionPct">Porcentaje de comisión:</label>
+            <input formControlName="commission_pct" type="number" class="form-control" id="commissionPct"
+                placeholder="Ingrese el porcentaje de comisión" required>
+        </div>
+        <div class="form-group">
+            <label for="managerId">Id del manager:</label>
+            <input formControlName="manager_id" type="number" class="form-control" id="managerId"
+                placeholder="Ingrese el ID del manager" required>
+        </div>
+        <div class="form-group">
+            <label for="departmentId">Id del departamento:</label>
+            <input formControlName="department_id" type="number" class="form-control" id="departmentId"
+                placeholder="Ingrese el ID del departamento" required>
+        </div>
+
+        <td><button class="btn btn-success" type="submit">Guardar</button></td>
+        <td><button class="btn btn-danger" (click)="back()">Cancelar</button></td>
+    </form>
+</div>

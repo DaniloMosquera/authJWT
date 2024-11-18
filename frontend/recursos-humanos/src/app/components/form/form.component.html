@@ -1,0 +1,44 @@
+<div class="container">
+    <br>
+    <h1>Tabla de Empleados</h1>
+    <hr>
+    <button class="btn btn-success" (click)="addEmployee()">Nuevo</button>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Fecha de contrato</th>
+                <th scope="col">ID de trabajo</th>
+                <th scope="col">Salario</th>
+                <th scope="col">Comisión</th>
+                <th scope="col">Manager</th>
+                <th scope="col">Departamento</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees; index as i">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{employee.employee_id}}</td>
+                <td>{{employee.first_name}}</td>
+                <td>{{employee.last_name}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.phone_number}}</td>
+                <td>{{employee.hire_date}}</td>
+                <td>{{employee.job_id}}</td>
+                <td>{{employee.salary}}</td>
+                <td>{{employee.commission_pct}}</td>
+                <td>{{employee.manager_id}}</td>
+                <td>{{employee.department_id}}</td>
+                <td><button class="btn btn-success" (click)="editEmployee(employee.employee_id)">Editar</button></td>
+                <td><button class="btn btn-danger" (click)="deleteEmployee(employee.employee_id)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
